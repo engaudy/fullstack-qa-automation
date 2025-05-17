@@ -11,8 +11,7 @@ import com.demoblaze.ui.utils.WaitUtils;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.*;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -80,20 +79,17 @@ public class DemoBlazeSteps {
     @Then("I should see the user logged in as {string}")
     public void i_should_see_the_user_logged_in_as(String expectedUsername) {
         String loggedUserText = homePage.waitForUserLoggedName();
-        assertAll("Verify logged in user",
-                () -> assertTrue(loggedUserText.contains(expectedUsername),
-                        () -> "Expected logged in user to contain: '" + expectedUsername + "', but was: '" + loggedUserText + "'")
-        );
+        String message = "Expected logged in user to contain: '" + expectedUsername + "', but was: '" + loggedUserText + "'";
+        assertTrue(message, loggedUserText.contains(expectedUsername));
     }
 
     @Then("I should see a login error message")
     public void i_should_see_a_login_error_message() {
         homePage.waitForLoginAlert();
         String alertText = homePage.getLoginAlertText();
-        assertTrue(
-                alertText.contains("User does not exist.") || alertText.contains("Wrong password."),
-                "Expected error message to contain either 'User does not exist.' or 'Wrong password.', but was: '" + alertText + "'"
-        );
+        String message = "Expected error message to contain either 'User does not exist.' or 'Wrong password.', but was: '" + alertText + "'";
+        assertTrue(message,
+                alertText.contains("User does not exist.") || alertText.contains("Wrong password."));
     }
 
     @Then("I should see only products related to {string}")
