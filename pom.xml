@@ -18,6 +18,7 @@
         <junit.version>4.13.2</junit.version>
         <serenitybdd.version>4.2.23</serenitybdd.version>
         <webdrivermanager.version>6.1.0</webdrivermanager.version>
+        <jacksonbind.version>2.19.0</jacksonbind.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -85,6 +86,20 @@
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay-webdriver</artifactId>
             <version>${serenitybdd.version}</version>
+        </dependency>
+
+        <!-- Serenity REST -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-rest-assured</artifactId>
+            <version>${serenitybdd.version}</version>
+        </dependency>
+
+        <!-- JSON Parsing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jacksonbind.version}</version>
         </dependency>
 
     </dependencies>

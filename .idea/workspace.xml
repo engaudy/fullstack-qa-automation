@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427cd90f-b5e8-4b88-bed2-3c006d607c55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/userProfile.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/api/models/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/api/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/api/runners/RunApiCucumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/api/stepdefinitions/UserStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/api/utils/ApiUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/ui/stepdefinitions/api/UserStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/api/pet.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/api/user.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/ui/runners/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/ui/runners/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/api/ApiTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +41,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Validate that each category shows correct products.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RunCucumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fullstack-qa-automation [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fullstack-qa-automation [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fullstack-qa-automation [net.serenity-bdd.maven.plugins:serenity-maven-plugin:4.2.23:aggregate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fullstack-qa-automation [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fullstack-qa-automation [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.fullstack-qa-automation [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Scenario: Create a new user with details from table.executor": "Run",
+    "Cucumber Java.Scenario: Create a new user.executor": "Run",
+    "Cucumber Java.Scenario: Validate that each category shows correct products.executor": "Debug",
+    "JUnit.RunApiCucumberTest.executor": "Run",
+    "JUnit.RunCucumberTest.executor": "Run",
+    "Maven.fullstack-qa-automation [clean].executor": "Run",
+    "Maven.fullstack-qa-automation [compile].executor": "Run",
+    "Maven.fullstack-qa-automation [net.serenity-bdd.maven.plugins:serenity-maven-plugin:4.2.23:aggregate].executor": "Run",
+    "Maven.fullstack-qa-automation [package].executor": "Run",
+    "Maven.fullstack-qa-automation [test].executor": "Run",
+    "Maven.fullstack-qa-automation [validate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java/com/demoblaze/stepdefinitions" />
@@ -59,8 +70,26 @@
       <recent name="$PROJECT_DIR$/src/test/java/com/demoblaze/stepdefinitions/login" />
       <recent name="$PROJECT_DIR$/src/test/java/com/demoblaze/pages" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demoblaze.api.runners" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RunApiCucumberTest">
+    <configuration name="RunApiCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fullstack-qa-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoblaze.api.runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoblaze.api.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.demoblaze.api.runners.RunApiCucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fullstack-qa-automation" />
       <extension name="coverage">
@@ -78,6 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RunApiCucumberTest" />
         <item itemvalue="JUnit.RunCucumberTest" />
       </list>
     </recent_temporary>
