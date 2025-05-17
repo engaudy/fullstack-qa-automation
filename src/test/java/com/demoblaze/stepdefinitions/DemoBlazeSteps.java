@@ -1,5 +1,5 @@
 
-package com.demoblaze.stepdefinitions.login;
+package com.demoblaze.stepdefinitions;
 
 import com.demoblaze.pages.HomePage;
 import com.demoblaze.pages.OrderPage;
