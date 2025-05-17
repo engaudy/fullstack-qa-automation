@@ -161,6 +161,12 @@ public class DemoBlazeSteps {
         }
     }
 
+    @When("I should see in the cart to place order")
+    public void i_should_see_product_in_cart() {
+        waitUtils.waitForSeconds(null);
+        cartPage.clickPlaceOrder();
+    }
+
     @When("I fill the order form with name {string}, country {string}, city {string}, credit card {string}, month {string}, year {string}")
     public void i_fill_the_order_form(String name, String country, String city, String creditCard, String month, String year) {
         waitUtils.waitForSeconds(null);
