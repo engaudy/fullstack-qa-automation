@@ -40,3 +40,11 @@ Feature: Purchase a product on DemoBlaze
     Examples:
       | username | password |
       | admin    | admin    |
+
+  @wip
+  Scenario: Change the quantity of a product in the cart and validate that the total price updates correctly
+    # Given the user has added a product to the cart
+    # And the user is on the cart page
+    # When the user changes the quantity of the product
+    # Then the total price should be updated accordingly
+    # And the updated total should reflect the new quantity multiplied by the product price
