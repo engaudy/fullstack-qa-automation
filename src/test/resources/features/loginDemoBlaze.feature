@@ -1,6 +1,6 @@
 Feature: Login to DemoBlaze
 
-  @regression
+  @login
   Scenario Outline: User tries to log in with credentials
     Given I am on the DemoBlaze homepage
     When I open the login modal
@@ -13,7 +13,7 @@ Feature: Login to DemoBlaze
       | username | password |
       | admin    | admin    |
 
-  @regression
+  @login
   Scenario Outline: User tries to log in with invalid credentials
     Given I am on the DemoBlaze homepage
     When I open the login modal
