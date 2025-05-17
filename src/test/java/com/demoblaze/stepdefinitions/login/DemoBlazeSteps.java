@@ -2,7 +2,10 @@
 package com.demoblaze.stepdefinitions.login;
 
 import com.demoblaze.pages.HomePage;
+import com.demoblaze.pages.OrderPage;
+import com.demoblaze.pages.ProductPage;
 import com.demoblaze.pages.UserHomePage;
+import com.demoblaze.pages.CartPage;
 import com.demoblaze.utils.CategoryUtils;
 import com.demoblaze.utils.WaitUtils;
 import io.cucumber.java.BeforeAll;
@@ -10,13 +13,9 @@ import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 import java.util.List;
 
 public class DemoBlazeSteps {
@@ -24,6 +23,9 @@ public class DemoBlazeSteps {
     private static WebDriver driver;
     private static HomePage homePage;
     private static UserHomePage userHomePage;
+    private static OrderPage orderPage;
+    private static ProductPage productPage;
+    private static CartPage cartPage;
     WaitUtils waitUtils = new WaitUtils(driver);
 
     @BeforeAll
@@ -32,6 +34,9 @@ public class DemoBlazeSteps {
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
         userHomePage = new UserHomePage(driver);
+        productPage = new ProductPage(driver);
+        cartPage = new CartPage(driver);
+        orderPage = new OrderPage(driver);
     }
 
     @AfterAll
@@ -118,4 +123,69 @@ public class DemoBlazeSteps {
             }
         }
     }
+
+
+    //Flow to add products
+    @When("I select the product {string} to the product page")
+    public void i_add_the_product_to_the_product_page(String productName) {
+        waitUtils.waitForSeconds(null);
+        userHomePage.clickProductByName(productName);
+    }
+
+    //To validate if the product is the same before add to the cart
+    @When("I add the product to the cart {string}")
+    public void i_add_the_product_to_the_cart(String productName) {
+        waitUtils.waitForSeconds(null);
+        String displayedProduct = userHomePage.getTextAnyProduct();
+        if (displayedProduct.equalsIgnoreCase(productName)) {
+            productPage.clickAddToCart();
+        } else {
+            throw new AssertionError("Expected product '" + productName + "', but found '" + displayedProduct + "'");
+        }
+    }
+
+    @When("I open the cart")
+    public void i_open_the_cart() {
+        waitUtils.waitForSeconds(null);
+        userHomePage.clickCart();
+    }
+
+    @When("I should see {string} in the cart to place order")
+    public void i_should_see_product_in_cart(String productName) {
+        waitUtils.waitForSeconds(null);
+        String displayedProduct = cartPage.getProductAdded();
+        if (displayedProduct.equalsIgnoreCase(productName)) {
+            cartPage.clickPlaceOrder();
+        } else {
+            throw new AssertionError("Expected product '" + productName + "', but found '" + displayedProduct + "'");
+        }
+    }
+
+    @When("I fill the order form with name {string}, country {string}, city {string}, credit card {string}, month {string}, year {string}")
+    public void i_fill_the_order_form(String name, String country, String city, String creditCard, String month, String year) {
+        waitUtils.waitForSeconds(null);
+        orderPage.enterName(name);
+        orderPage.enterCountry(country);
+        orderPage.enterCity(city);
+        orderPage.enterCreditCard(creditCard);
+        orderPage.enterMonth(month);
+        orderPage.enterYear(year);
+    }
+
+    @When("I confirm the purchase")
+    public void i_confirm_the_purchase() {
+        waitUtils.waitForSeconds(null);
+        orderPage.clickPurchase();
+
+    }
+
+    @Then("I should see a confirmation message")
+    public void i_should_see_confirmation_message() {
+        waitUtils.waitForSeconds(null);
+    String confirmation = orderPage.getConfirmationMessage();
+        assertTrue(confirmation.contains("Thank you for your purchase"));
+        orderPage.confirmOk();
+        waitUtils.waitForSeconds(null);
+    }
+
 }

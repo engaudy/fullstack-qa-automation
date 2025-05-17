@@ -1,4 +1,4 @@
-@category
+@categories
 Feature: Category Validation on DemoBlaze
 
   Scenario Outline: Validate that each category shows correct products

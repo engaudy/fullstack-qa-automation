@@ -12,11 +12,15 @@ import java.util.List;
 
 public class UserHomePage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public UserHomePage(WebDriver driver) {
         this.driver = driver;
     }
+
+    private final By Cart = By.xpath("//*[@id='navbarExample']//a[text()='Cart']");
+
+    private final By anyProduct = By.xpath("//h2[string-length(normalize-space()) > 0]");
 
     private By categoryLocator(String category) {
         return By.xpath("//*[@id='itemc' and text()='" + category + "']");
@@ -49,6 +53,20 @@ public class UserHomePage {
             fluentWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-title")));
             return true;
         });
+    }
+
+    public void clickCart() {
+        driver.findElement(Cart).click();
+    }
+
+    public String getTextAnyProduct() {
+        return driver.findElement(anyProduct).getText();
+    }
+
+    public void clickProductByName(String productName) {
+        String xpath = "//*[@id='tbodyid']//h4/a[text()='" + productName + "']";
+        WebElement productLink = driver.findElement(By.xpath(xpath));
+        productLink.click();
     }
 
     public List<WebElement> getProductLinks() {

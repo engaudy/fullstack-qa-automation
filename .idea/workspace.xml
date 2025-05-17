@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427cd90f-b5e8-4b88-bed2-3c006d607c55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serenity.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/UserHomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/utils/CategoryUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/utils/WaitUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/demoBlaze.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/OrderPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/ProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/flowDemoBlaze.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serenity.properties" beforeDir="false" afterPath="$PROJECT_DIR$/serenity.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/UserHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/pages/UserHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/runners/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/runners/RunCucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/stepdefinitions/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/stepdefinitions/login/DemoBlazeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoblaze/stepdefinitions/login/DemoBlazeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoblaze/stepdefinitions/login/DemoBlazeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/demoBlaze.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/categoriesDemoBlaze.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

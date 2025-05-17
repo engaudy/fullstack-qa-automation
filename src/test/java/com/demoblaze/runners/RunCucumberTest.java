@@ -8,7 +8,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "com.demoblaze.stepdefinitions",
-        tags = "@login or @category",
+        tags = "@login or @categories or @flow",
         plugin = {"pretty"}
 )
 
