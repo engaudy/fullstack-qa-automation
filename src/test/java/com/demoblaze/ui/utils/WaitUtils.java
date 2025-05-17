@@ -1,12 +1,8 @@
-package com.demoblaze.utils;
+package com.demoblaze.ui.utils;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-import java.util.Objects;
 
 public class WaitUtils {
 
@@ -28,5 +24,4 @@ public class WaitUtils {
 
         wait.until(driver -> System.currentTimeMillis() >= endTime);
     }
-
 }

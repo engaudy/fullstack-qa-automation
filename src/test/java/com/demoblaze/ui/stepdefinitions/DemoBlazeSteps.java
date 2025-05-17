@@ -1,13 +1,13 @@
 
-package com.demoblaze.stepdefinitions;
+package com.demoblaze.ui.stepdefinitions;
 
-import com.demoblaze.pages.HomePage;
-import com.demoblaze.pages.OrderPage;
-import com.demoblaze.pages.ProductPage;
-import com.demoblaze.pages.UserHomePage;
-import com.demoblaze.pages.CartPage;
-import com.demoblaze.utils.CategoryUtils;
-import com.demoblaze.utils.WaitUtils;
+import com.demoblaze.ui.pages.HomePage;
+import com.demoblaze.ui.pages.OrderPage;
+import com.demoblaze.ui.pages.ProductPage;
+import com.demoblaze.ui.pages.UserHomePage;
+import com.demoblaze.ui.pages.CartPage;
+import com.demoblaze.ui.utils.CategoryUtils;
+import com.demoblaze.ui.utils.WaitUtils;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.*;

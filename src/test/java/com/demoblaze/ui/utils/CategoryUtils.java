@@ -1,4 +1,4 @@
-package com.demoblaze.utils;
+package com.demoblaze.ui.utils;
 
 import java.util.List;
 

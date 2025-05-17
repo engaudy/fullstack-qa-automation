@@ -1,4 +1,4 @@
-package com.demoblaze.pages;
+package com.demoblaze.ui.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
