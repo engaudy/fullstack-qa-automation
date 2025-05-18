@@ -2,6 +2,7 @@ package com.demoblaze.api.utils;
 
 import com.demoblaze.api.models.User;
 import com.demoblaze.api.models.Pet;
+import com.demoblaze.api.models.Order;
 import net.serenitybdd.rest.SerenityRest;
 import io.restassured.response.Response;
 
@@ -71,6 +72,40 @@ public class ApiUtils {
                 .header("Content-Type", "application/json")
                 .when()
                 .get("/pet/" + petId)
+                .then()
+                .log().all();
+    }
+
+    public static Response createOrder(Order order) {
+        return SerenityRest
+                .given()
+                .baseUri(BASE_URL)
+                .header("Content-Type", "application/json")
+                .body(order)
+                .when()
+                .post("/store/order")
+                .then()
+                .statusCode(200)
+                .extract()
+                .response();
+    }
+
+    public static void fetchOrder(int orderId) {
+        SerenityRest
+                .given()
+                .baseUri(BASE_URL)
+                .when()
+                .get("/store/oder/" + orderId)
+                .then()
+                .log().all();
+    }
+
+    public static void deleteOrder(int orderId) {
+        SerenityRest
+                .given()
+                .baseUri(BASE_URL)
+                .when()
+                .delete("/store/order/" + orderId)
                 .then()
                 .log().all();
     }

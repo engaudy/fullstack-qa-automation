@@ -113,6 +113,7 @@
                 <configuration>
                     <includes>
                         <include>**/RunCucumberTest.java</include>
+                        <include>**/RunApiCucumberTest.java</include>
                         <include>**/*Test.java</include>
                     </includes>
                 </configuration>
