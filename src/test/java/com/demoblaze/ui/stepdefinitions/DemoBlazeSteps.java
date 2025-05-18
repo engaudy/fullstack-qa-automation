@@ -8,6 +8,7 @@ import com.demoblaze.ui.pages.UserHomePage;
 import com.demoblaze.ui.pages.CartPage;
 import com.demoblaze.ui.utils.CategoryUtils;
 import com.demoblaze.ui.utils.WaitUtils;
+import com.demoblaze.ui.utils.SiteHealthCheck;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.*;
@@ -36,6 +37,7 @@ public class DemoBlazeSteps {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
         orderPage = new OrderPage(driver);
+        SiteHealthCheck.verifySiteIsUp(driver);
     }
 
     @AfterAll
